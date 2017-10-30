@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+{% include 'diverlog/jquery.html.twig' %}
+
+<div id="container">
+	<div class="container">
+		<br><br>
+		{% include('flash-messages.html.twig') %}
+		<div class="row top-buffer">
+			<div class="col-sm-12">
+				<h3>Diver Log
+				<input type="button" value="Add Diver Log" class="btn btn-primary"
+				onclick="document.location.href='{{ path('addlog') }}'">
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

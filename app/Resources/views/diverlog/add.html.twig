@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+  
+<div id="container">
+	<br>
+	<div class="container">
+		<h3>New Diver Log:</h3>
+		<div class="row top-buffer">
+			<div class="col-sm-6">Dive Trip:</div>
+			<div class="col-sm-6">
+				<select name="boatID" class="form-control" required>
+					<option selected value="">--Select--</option>
+					<option value="27">Bahamas Aggressor</option>
+					<option value="1">Belize Aggressor III</option>
+					<option value="28">Belize Aggressor IV</option>
+					<option value="3">Cayman Aggressor IV</option>
+					<option value="30">Fiji Aggressor</option>
+					<option value="7">Galapagos Aggressor III</option>
+					<option value="32">Indo Aggressor</option>
+					<option value="9">Kona Aggressor II</option>
+					<option value="44">Maldives Aggressor II</option>
+					<option value="10">Okeanos Aggressor I</option>
+					<option value="31">Okeanos Aggressor II</option>
+					<option value="43">Oman Aggressor</option>
+					<option value="11">Palau Aggressor II</option>
+					<option value="38">Raja Ampat Aggressor</option>
+					<option value="34">Red Sea Aggressor</option>
+					<option value="47">Red Sea Aggressor II</option>
+					<option value="46">Roatan Aggressor</option>
+					<option value="29">Rock Islands Aggressor</option>
+					<option value="33">Thailand Aggressor</option>
+					<option value="16">Turks & Caicos Aggressor II</option>
+				</select>
+			</div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-sm-6">Dive Date:</div>
+			<div class="col-sm-6">
+				<input type="text" name="dive_date" class="form-control date">
+			</div>
+		</div>
+
+		<div class="row top-buffer">
+			<div class="col-sm-12">
+				<input type="submit" value="Save Log" class="btn btn-success">&nbsp;
+				<input type="button" value="Cancel" class="btn btn-warning" onclick="document.location.href='{{ path('diverlog') }}'">
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

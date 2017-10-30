@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="container">
+    <h3 class="text-center">User Profile</h3><br>
+    {% include('flash-messages.html.twig') %}
+
+    {{ form(profile_form) }}
+
+
+    </div>
+
+    
+
+{% endblock %}
+
+{% block stylesheets %}
+
+{% endblock %}
